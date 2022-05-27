@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap-icons/font/bootstrap-icons.css';
+@import './assets/scss/colors-palette.scss';
+@import './assets/scss/font-map.scss';
+
+// SCSS files by screen sizes 
+@import './assets/scss/xs-screens.scss';
+@import './assets/scss/sm-screens.scss';
+@import './assets/scss/md-screens.scss';
+@import './assets/scss/lg-screens.scss';
+@import './assets/scss/xl-screens.scss';
+@import './assets/scss/xxl-screens.scss';

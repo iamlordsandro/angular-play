@@ -1,0 +1,8 @@
+<div class="row">
+    <div class="col-12">
+        <wc-lib-icon [class]=icon [size]="size" *ngIf="icon"></wc-lib-icon>
+        <wc-lib-avatar class="" [avatarSrc]="'./assets/avatar/'" [avatarMood]="avatarMood" [avatarHeight]="100" *ngIf="avatarMood"></wc-lib-avatar>
+        <h4 *ngIf="errorCode">{{errorCode}}</h4>
+        <h6 *ngIf="errorMessage">{{errorMessage}}</h6>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+.DS_Store
+LICENSE
+/node_modules
+/dist
+.angular
+package-lock.json

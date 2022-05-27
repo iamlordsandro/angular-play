@@ -1,0 +1,12 @@
+<div class="list-group">
+    <button 
+        type="button" 
+        [class]="item.class"
+        [class.active]="activeItem === item.action"
+        aria-current="true" 
+        [id]="item.id"
+        (click)="onClickedButton(item.action)" *ngFor="let item of listGroupOptions; index as i; trackBy: identifyItem">
+        <wc-lib-icon [class]=item.icon></wc-lib-icon>
+            {{item.label}}
+    </button>
+</div>

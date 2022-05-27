@@ -1,0 +1,23 @@
+<div class="card border-white mb-3">
+    <div class="card-header text-end text-secondary bg-white"> </div>
+    <div class="card-body">
+        <h4 class="card-title"><a href={{html_url}} target="_blank">{{name}}</a></h4>
+        <div class="row">
+            <div class="col-7 text-start">
+                <h6 class="text-secondary">Last updated {{updated_at | date }}</h6>
+            </div>
+            <div class="col-5 text-end">
+                <!-- <h6 class="text-secondary">Last updated {{updated_at | date }}</h6> -->
+            </div>
+        </div>
+        <p [innerHtml]="description"></p>
+        <div class="row">
+            <div class="col-6">
+                <!-- <a [routerLink]="['/post', id]" class="card-link">Read More</a> -->
+            </div>
+            <div class="col-6">
+                <!-- <h6 class="text-end text-secondary" *ngIf="replies !== '0'"><i class="bi bi-chat-right"></i> {{replies}}</h6> -->
+            </div>
+        </div>
+    </div>
+</div>

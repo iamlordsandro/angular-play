@@ -1,0 +1,39 @@
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+.row.pt-5 {
+    border-top: lightgray 3px solid;
+}
+
+h5, li {
+    cursor: pointer;
+    :hover {
+        color: white;
+    }
+}
+
+h5:hover {
+    color: white;
+}
+
+.list-group-item {
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    padding: .5rem;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {}

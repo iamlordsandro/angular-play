@@ -1,0 +1,47 @@
+<div class="container mt-5">
+    <div class="row pt-5">
+        <div class="d-none d-md-block col-md-6 col-lg-4">
+            <a class="link-secondary" routerLink="/blog" routerLinkActive="active">
+                <wc-lib-icon [class]="'bi bi-stickies'"></wc-lib-icon>
+            </a>
+            <ul>
+                <li *ngFor="let post of blogPostItems; index as i; trackBy: identifyItem3">
+                    <a class="link-secondary" [routerLink]="['/post', post.id]">{{post.title}}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="d-none d-md-block col-md-6 col-lg-4">
+            <a class="link-secondary" routerLink="/projects" routerLinkActive="active">
+                <wc-lib-icon [class]="'bi bi-terminal'"></wc-lib-icon>
+            </a>
+            <ul>
+                <li *ngFor="let repo of repositoriesList; index as i; trackBy: identifyItem2"> 
+                    <a class="link-secondary" href={{repo.html_url}} target="_blank">{{repo.name}}</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-12 col-md-12 col-lg-4">
+            <ul class="list-group list-group-horizontal justify-content-center">
+                <li class="list-group-item" *ngFor="let item of socialLinkItems; index as i; trackBy: identifyItem">
+                    <wc-lib-external-link-anchor [class]="'link-secondary'" [label]="item.label" [isLabelHidden]='true'
+                        [icon]="item.icon" [isIconHidden]="false" [href]="item.url" [target]="'_blank'">
+                    </wc-lib-external-link-anchor>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row mt-1">
+        <div class="col-12 text-center">
+            <ws-made-in></ws-made-in>
+        </div>
+    </div>
+
+    <div class="row mt-1">
+        <div class="col-12 text-center">
+            <ws-website-version></ws-website-version>
+        </div>
+    </div>
+
+</div>

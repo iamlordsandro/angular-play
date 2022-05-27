@@ -1,0 +1,59 @@
+<div class="row">
+    <div class="col-12">
+        <wc-lib-page-title [pageTitle]="pageTitle"></wc-lib-page-title>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 text-center">
+        <wc-lib-spinner [isLoading]="isLoading"></wc-lib-spinner>
+    </div>
+</div>
+
+<div class="row" *ngIf="blogPostItems.length===0 && isLoading===false">
+    <div class="col-12 text-center">
+        <ws-error-state [avatarMood]="'buddha'" [errorCode]="''" [errorMessage]="'No post yet!'"></ws-error-state>
+    </div>
+</div>
+
+<div class="row" *ngIf="blogPostItems.length !==0 && isLoading===false">
+    <div class="col-12 col-md-4">
+
+        <div class="row">
+            <div class="col-12">
+                <h5 class="text-secondary">There are <strong>{{blogPostsCount}}</strong> posts.</h5>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <wc-lib-list-group [listGroupOptions]="listGroupOptions" [activeItem]="viewLayout"
+                    (clickedButtonEvent)="onButtonClickHandler($event)">
+                </wc-lib-list-group>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-12 col-md-8">
+
+        <div class="row" [ngSwitch]="viewLayout">
+            <div class="col-12" *ngSwitchCase="'archive'">
+                <ws-posts-archive [blogPostsArchiveItems]="blogPostsArchiveItems"></ws-posts-archive>
+            </div>
+
+            <div class="col-12" *ngSwitchCase="'subscribe'">
+                <div class="col-12">
+                    <h1>Subscribe</h1>
+                    <p>Read about subscribe.</p>
+                </div>
+            </div>
+
+            <div class="col-12" *ngSwitchDefault>
+                <ws-posts-list [posts]="blogPostItems"></ws-posts-list>
+            </div>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col-12">
+        <wc-lib-page-title [pageTitle]="pageTitle"></wc-lib-page-title>
+    </div>
+</div>
+
+<div class="row mt-2 mb-5">
+    <div class="col-12 col-md-2">
+
+    </div>
+
+    <div class="col-12 col-md-8">
+        <div class="row">
+            <div class="col-12 mt-2 mb-2 text-end">
+                <wc-lib-typewriter class="d-inline-flex" [string]="'I am Sandro'"></wc-lib-typewriter>
+            </div>
+
+            <div class="col-12 mt-2 mb-2 text-end" [@fadeInOnEnter] (@fadeInOnEnter.start)="onAnimationStart()"
+                (@fadeInOnEnter.done)="onAnimationDone()">
+                <blockquote class="blockquote mb-0">
+                    <p>Do or not do. There is no try.</p>
+                    <footer class="blockquote-footer"><cite title="Source Title">Yoda</cite>
+                    </footer>
+                </blockquote>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 mt-2 mb-2">
+                <p>Hey! <br> Welcome to my space. </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro optio perferendis corporis sapiente cum. Deleniti tenetur accusantium et sequi quam deserunt doloremque, quisquam explicabo voluptate quod veniam, facilis debitis? Necessitatibus!
+                    my <a routerLink="/projects" class="text-decoration-none">projects</a>,
+                    read my <a routerLink="/blog" class="text-decoration-none">blog</a> and
+                
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-2">
+        <div class="col-12 mt-2 mb-5 text-center" [@fadeInOnEnter] (@fadeInOnEnter.done)="onAnimationDone()">
+            <wc-lib-avatar class="" [avatarSrc]="'./assets/avatar/'" [avatarMood]="'work'" [avatarHeight]="100">
+            </wc-lib-avatar>
+        </div>
+    </div>
+
+</div>

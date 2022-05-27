@@ -1,0 +1,7 @@
+<div class="row" *ngFor="let post of posts; index as i; trackBy: identifyItem">
+    <div class="col-12">
+        <ws-post-card [id]="post.id" [postTitle]="post.title" [author]="post.author.displayName"
+            [published]="post.published" [content]="post.content" [replies]="post.replies.totalItems">
+        </ws-post-card>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-12">
+        <form [formGroup]="emailForm" (ngSubmit)="onSubmitSendEmail($event)">
+            <div class="mb-3">
+                <input type="text" class="form-control" id="senderName" aria-describedby="name"
+                    formControlName="senderNameValidation" placeholder="Your Name" name="user_name" required
+                    [readonly]="isLoading">
+                <div id="senderNameError" class="form-text text-danger"
+                    *ngIf="senderNameValidation.invalid && (senderNameValidation.dirty || senderNameValidation.touched)">
+                    Your name is not valid. </div>
+            </div>
+            <div class="mb-3">
+                <input type="email" class="form-control" id="senderEmail" aria-describedby="email"
+                    formControlName="senderEmailValidation" placeholder="Your Email" required name="user_email"
+                    [readonly]="isLoading">
+                <div id="emailHelp" class="form-text" *ngIf="!senderEmailValidation.invalid">I'll never share your email
+                    with anyone else.</div>
+                <div id="emailError" class="form-text text-danger"
+                    *ngIf="senderEmailValidation.invalid && (senderEmailValidation.dirty || senderEmailValidation.touched)">
+                    Your email is not valid. </div>
+            </div>
+            <div class="mb-3">
+                <textarea rows="5" class="form-control" id="inputMessage" aria-describedby="message"
+                    formControlName="senderMessageValidation" placeholder="Your Message" required name="message"
+                    [readonly]="isLoading"></textarea>
+                <div id="messageError" class="form-text text-danger"
+                    *ngIf="senderMessageValidation.invalid && (senderMessageValidation.dirty || senderMessageValidation.touched)">
+                    Your message is not valid. </div>
+
+                <div id="messageSendSuccess" class="form-text text-success" *ngIf="isSendSuccess">
+                    Keep in touch! </div>
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="!emailForm.valid || isLoading">Send</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+/** HTML elements **/
+
+h1, h2, h3, h4, h5, h6, a, span, p, label, tr, td, img {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+a {
+    cursor: pointer;
+}
+
+.navbar-expand-md .navbar-collapse {
+    flex-direction: row-reverse;
+}
